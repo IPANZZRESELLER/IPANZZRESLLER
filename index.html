@@ -3,102 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>List Midman Trusted Malaysia</title>
 
 <style>
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --border:#ddd;
+  --box:#f9f9f9;
+  --red:#c40000;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f0f0f;
+    --text:#eee;
+    --border:#333;
+    --box:#1a1a1a;
+  }
+}
+*{box-sizing:border-box}
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-  background:#fff;
-  color:#111;
-  line-height:1.4;
+  background:var(--bg);
+  color:var(--text);
 }
-
-header{
+.header{
   padding:14px;
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid var(--border);
 }
+.header h1{margin:0;font-size:17px;font-weight:600}
+.header p{margin:4px 0 0;font-size:12px;color:#888}
 
-header h1{
-  margin:0;
-  font-size:18px;
-  font-weight:600;
-}
-
-header p{
-  margin:4px 0 0;
-  font-size:13px;
-  color:#666;
-}
-
-.wrap{
-  max-width:720px;
-  margin:auto;
-  padding:14px;
-}
+.wrap{max-width:720px;margin:auto;padding:14px}
 
 .title{
-  display:flex;
-  align-items:center;
-  font-size:14px;
-  font-weight:600;
+  display:flex;align-items:center;
+  font-size:14px;font-weight:600;
   margin:18px 0 8px;
 }
-
 .title::before{
-  content:"";
-  width:4px;
-  height:18px;
-  background:#c40000;
-  margin-right:8px;
+  content:"";width:4px;height:18px;
+  background:var(--red);margin-right:8px;
 }
 
-.box{
-  border:1px solid #e5e5e5;
-  background:#fff;
-  border-radius:4px;
-}
+.box{border:1px solid var(--border);background:var(--box)}
+.item{padding:12px;border-bottom:1px solid var(--border)}
+.item:last-child{border-bottom:none}
 
-.item{
-  padding:14px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-.item:last-child{
-  border-bottom:none;
-}
-
-.name{
-  font-size:14px;
-  font-weight:600;
-}
-
-.info{
-  font-size:13px;
-  margin-top:3px;
-}
-
-a{
-  color:#c40000;
-  text-decoration:none;
-  font-weight:600;
-}
+.name{font-size:14px;font-weight:600}
+.info{font-size:13px;margin-top:3px}
+.info b{color:var(--red)}
 
 .link{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
   margin-top:6px;
+  padding:6px 10px;
   font-size:13px;
+  color:#25D366;
+  border:1px solid #25D366;
+  border-radius:3px;
+  text-decoration:none;
 }
-
-.warn{
-  margin-top:14px;
-  font-size:12px;
-  color:#666;
-}
-
-footer{
-  border-top:1px solid #ddd;
+.warn{margin-top:14px;font-size:12px;color:#888}
+.footer{
+  border-top:1px solid var(--border);
+  margin-top:20px;
   padding:10px;
   text-align:center;
   font-size:11px;
@@ -109,59 +81,18 @@ footer{
 
 <body>
 
-<header>
+<div class="header">
   <h1>List Midman Trusted Malaysia</h1>
   <p>Ringkas • Untuk elak scam</p>
-</header>
+</div>
 
 <div class="wrap">
 
-  <!-- MIDMAN UTAMA -->
   <div class="title">Midman Utama</div>
-  <div class="box">
-    <div class="item">
-      <div class="name">1. MID IPANZZ</div>
-      <div class="info">WhatsApp: <a href="https://wa.me/60175970694">017-597 0694</a></div>
-      <div class="info">Status: Paid / Trusted Midman</div>
-      <a class="link" href="https://wa.me/60175970694">Hubungi WhatsApp</a>
-    </div>
-  </div>
+  <div class="box" id="utama"></div>
 
-  <!-- MIDMAN LAIN -->
   <div class="title">Senarai Midman Lain</div>
-  <div class="box">
-
-    <div class="item">
-      <div class="name">2. Bani Ojan</div>
-      <div class="info">WhatsApp: <a href="https://wa.me/60104331830">010-4331830</a></div>
-      <div class="info">Status: Trusted Malaysia</div>
-    </div>
-
-    <div class="item">
-      <div class="name">3. MIDMAN AASHOP</div>
-      <div class="info">WhatsApp: <a href="https://wa.me/60179981705">017-9981705</a></div>
-      <div class="info">Status: Trusted Malaysia</div>
-    </div>
-
-    <div class="item">
-      <div class="name">4. MIDMAN AMIRA</div>
-      <div class="info">WhatsApp: <a href="https://wa.me/601173807270">011-73807270</a></div>
-      <div class="info">Status: Trusted Malaysia</div>
-    </div>
-
-    <div class="item">
-      <div class="name">5. Milo</div>
-      <div class="info">WhatsApp: <a href="https://wa.me/60187905510">018-7905510</a></div>
-      <div class="info">Status: Trusted Malaysia</div>
-    </div>
-
-    <div class="item">
-      <div class="name">6. MID KIMZ</div>
-      <div class="info">WhatsApp: <a href="https://wa.me/60198511351">019-8511351</a></div>
-      <div class="info">Status: Trusted Malaysia</div>
-    </div>
-
-  </div>
+  <div class="box" id="lain"></div>
 
   <div class="warn">
     ⚠️ Gunakan hanya nombor rasmi. Jangan buat transaksi luar page ini.
@@ -169,9 +100,37 @@ footer{
 
 </div>
 
-<footer>
+<div class="footer">
   © 2026 MID IPANZZ • Trusted Midman Malaysia
-</footer>
+</div>
+
+<script>
+const utama = [
+  {nama:"MID IPANZZ", no:"60175970694", status:"Paid / Trusted Midman"}
+];
+
+const lain = [
+  {nama:"Bani Ojan", no:"60104331830"},
+  {nama:"MIDMAN AASHOP", no:"60179981705"},
+  {nama:"MIDMAN AMIRA", no:"601173807270"},
+  {nama:"Milo", no:"60187905510"},
+  {nama:"MID KIMZ", no:"60198511351"}
+];
+
+function render(list,id){
+  document.getElementById(id).innerHTML = list.map((x,i)=>`
+    <div class="item">
+      <div class="name">${i+1}. ${x.nama}</div>
+      <div class="info">WhatsApp: <b>${x.no.replace("60","0")}</b></div>
+      ${x.status?`<div class="info">Status: ${x.status}</div>`:"<div class='info'>Status: Trusted Malaysia</div>"}
+      <a class="link" href="https://wa.me/${x.no}">🟢 Hubungi WhatsApp</a>
+    </div>
+  `).join("");
+}
+
+render(utama,"utama");
+render(lain,"lain");
+</script>
 
 </body>
 </html>
